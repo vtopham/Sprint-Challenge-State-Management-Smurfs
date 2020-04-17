@@ -4,7 +4,7 @@ const initialState = {
     isWaiting: false,
     currentSmurfs: [
         {
-            name: "Brainey",
+            name: "TestCase",
             age: 200,
             height: "5cm",
             id: 0
