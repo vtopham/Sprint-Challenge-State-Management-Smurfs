@@ -13,7 +13,7 @@ const SmurfGallery = props => {
     
     useEffect(() => {
         props.getSmurfs()
-    })
+    },[])
     
     return (
         <>
