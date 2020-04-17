@@ -2,4 +2,26 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #0DB1EF;
 }
+
+* {
+  color: white;
+
+
+}
+/* 
+.individual-smurf {
+  width: 100%;
+    margin: 2%;
+    padding: 1%;
+
+    button {
+        color:#8A8695
+
+        &:hover {
+            background: #8A8695;
+            color: white;
+        }
+    }
+} */
