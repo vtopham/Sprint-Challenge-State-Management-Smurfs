@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { addSmurf } from '../actions'
+import { connect } from 'react-redux'
 
 //This will let you add a new smurf to the team!
-const SmurfForm = _ => {
+const SmurfForm = props => {
 
     const [formInput, setFormInput] = useState({
         name: "",
@@ -19,6 +21,11 @@ const SmurfForm = _ => {
         })
     }
 
+    const handleAdd = event => {
+        event.preventDefault()
+        props.addSmurf({...formInput, id: Math.floor(Math.random() * 100000)})
+    }
+
     return (
         <>
             <h2>Add Your Own Smurf</h2>
@@ -30,8 +37,10 @@ const SmurfForm = _ => {
 
             <label htmlFor = "height">Height in cm: </label>
             <input onChange = {handleChanges} id = "height" name = "height" type = "height" value = {formInput.height}/>
+
+            <button onClick = {handleAdd}>Add Smurf</button>
         </>
     )
 }
 
-export default SmurfForm
+export default connect(null, {addSmurf})(SmurfForm)

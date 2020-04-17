@@ -24,6 +24,7 @@ const SmurfGallery = props => {
                     <h3>{smurf.name}</h3>
                     <p>Height: {smurf.height}</p>
                     <p>Age: {smurf.age}</p>
+                    <p>Id: {smurf.age}</p>
                 </div>
             )
         })}

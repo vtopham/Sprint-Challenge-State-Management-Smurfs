@@ -15,7 +15,7 @@ const initialState = {
             name: "Dead Weight",
             age: 500,
             height: "10cm",
-            id: new Date()
+            id: 1234
         }
     ] 
 }
