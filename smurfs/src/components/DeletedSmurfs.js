@@ -14,6 +14,18 @@ const Cemetary = styled.div`
     width: 90%;
     margin: 0 auto;
     padding: 1%;
+
+    
+    }
+
+    .some-nice-greenery {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        img {
+            width: 20%;
+        }
 `
 
 
@@ -37,6 +49,10 @@ const DeletedSmurfs = props => {
                         </div>
                     )
                 })}
+            </div>
+            <div className = "some-nice-greenery">
+                <img src = "https://ya-webdesign.com/transparent450_/cartoon-bush-png-1.png" alt = "bush"/>
+                <img src = "https://ya-webdesign.com/transparent450_/cartoon-bush-png-1.png" alt = "bush"/>
             </div>
         </Cemetary>
 

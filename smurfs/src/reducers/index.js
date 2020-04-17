@@ -1,4 +1,4 @@
-import { FETCH_SMURF_START, FETCH_SMURF_SUCCESS, FETCH_SMURF_FAIL, ADD_SMURF_START, ADD_SMURF_SUCCESS, ADD_SMURF_FAIL, DELETE_SMURF_START, DELETE_SMURF_SUCCESS, DELETE_SMURF_FAIL} from '../actions/index'
+import { FETCH_SMURF_START, FETCH_SMURF_SUCCESS, FETCH_SMURF_FAIL, ADD_SMURF_START, ADD_SMURF_FAIL, DELETE_SMURF_START, DELETE_SMURF_SUCCESS} from '../actions/index'
 
 const initialState = {
     isWaiting: false,
@@ -45,11 +45,7 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 isWaiting: true
             }
-        case ADD_SMURF_SUCCESS:
-            return {
-                ...state,
-                isWaiting: false
-            }
+        
         case ADD_SMURF_FAIL:
             return {
                 ...state,
@@ -68,11 +64,7 @@ export const reducer = (state = initialState, action) => {
                 currentSmurfs: action.payload.newArray,
                 deletedSmurfs: [...state.deletedSmurfs, action.payload.murderedSmurf]
             }
-        case DELETE_SMURF_FAIL:
-            return {
-                ...state,
-                isWaiting: false
-            }
+        
         //default action
         default: 
             return state
