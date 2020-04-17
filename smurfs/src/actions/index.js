@@ -10,6 +10,9 @@ export const DELETE_SMURF_START = "DELETE_SMURF_START"
 export const DELETE_SMURF_SUCCESS = "DELETE_SMURF_SUCCESS"
 export const DELETE_SMURF_FAIL = "DELETE_SMURF_FAIL"
 
+export const MOD_SMURF_START = "MOD_SMURF_START"
+export const MOD_SMURF_FAIL = "MOD_SMURF_FAIL"
+
 
 //this will initially fetch the smurfs
 export const getSmurfs = () => dispatch => { 
@@ -25,6 +28,7 @@ export const getSmurfs = () => dispatch => {
     
 }
 
+//this will be used to add smurfs
 export const addSmurf = (smurf) => dispatch => {
     dispatch({type: ADD_SMURF_START})
 
@@ -37,6 +41,16 @@ export const addSmurf = (smurf) => dispatch => {
         })
 }
 
-export const murderSmurf = () => dispatch => {
-    //fill in for stretch
+export const murderSmurf = (smurf) => dispatch => {
+    //stretch! this removes the smurf from the API but stores it in our state still
+    dispatch({type:DELETE_SMURF_START})
+
+    axios.delete(`http://localhost:3333/smurfs/${smurf.id}`)
+        .then(res => {
+            dispatch({type: DELETE_SMURF_SUCCESS, payload: {newArray: res.data, murderedSmurf: smurf}})
+
+        })
+        .catch(err => {
+            console.log(err)
+        })
 }

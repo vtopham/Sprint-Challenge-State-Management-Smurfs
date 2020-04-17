@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { getSmurfs } from '../actions/index'
 import { connect } from 'react-redux'
+import GalleryIndividual from './GalleryIndividual'
 
 const mapStateToProps = state => {
     return {
@@ -20,12 +21,7 @@ const SmurfGallery = props => {
         <h2>Our Happy Smurf Family</h2>
         {props.currentSmurfs.map(smurf => {
             return (
-                <div key = {smurf.id} className = "individual-smurf">
-                    <h3>{smurf.name}</h3>
-                    <p>Height: {smurf.height}</p>
-                    <p>Age: {smurf.age}</p>
-                    <p>Id: {smurf.age}</p>
-                </div>
+                <GalleryIndividual key = {smurf.id} smurf = {smurf}/>
             )
         })}
         </>

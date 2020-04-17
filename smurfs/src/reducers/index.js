@@ -64,7 +64,9 @@ export const reducer = (state = initialState, action) => {
         case DELETE_SMURF_SUCCESS:
             return {
                 ...state,
-                isWaiting: false
+                isWaiting: false,
+                currentSmurfs: action.payload.newArray,
+                deletedSmurfs: [...state.deletedSmurfs, action.payload.murderedSmurf]
             }
         case DELETE_SMURF_FAIL:
             return {

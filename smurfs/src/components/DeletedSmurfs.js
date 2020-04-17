@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import GalleryIndividual from './GalleryIndividual'
 
 const mapStateToProps = state => {
     return {
