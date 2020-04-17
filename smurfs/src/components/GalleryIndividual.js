@@ -3,6 +3,26 @@ import { connect } from 'react-redux'
 
 import { murderSmurf } from '../actions/index'
 
+import styled from 'styled-components'
+
+const Smurf = styled.div`
+    width: 100%;
+    margin: 2%;
+    padding: 1%;
+
+    button {
+        color:#8A8695;
+
+        &:hover {
+            background: #8A8695;
+            color: white;
+            padding: 2%;
+        }
+    }
+
+`
+
+//this will be called for each gallery individual
 const GalleryIndividual = props => {
 
     const { smurf } = props
@@ -13,13 +33,12 @@ const GalleryIndividual = props => {
     }
     
     return (
-        <div className = "individual-smurf">
+        <Smurf className = "individual-smurf">
             <h3>{smurf.name}</h3>
             <p>Height: {smurf.height}</p>
             <p>Age: {smurf.age}</p>
-            <p>Id: {smurf.id}</p>
             <button onClick = {handleDeath}>Send me to my grave</button>
-        </div>
+        </Smurf>
 
     )
 }

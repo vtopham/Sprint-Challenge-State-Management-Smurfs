@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+
+//there are a bunch of extra things up here lol, i made them before i realized i didn't want to use them all. will clean up if i have time.
 export const FETCH_SMURF_START = "FETCH_SMURF_START"
 export const FETCH_SMURF_SUCCESS = "FETCH_SMURF_SUCCESS"
 export const FETCH_SMURF_FAIL = "FETCH_SMURF_FAIL"
