@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 const SmurfGallery = props => {
     
     useEffect(() => {
-        getSmurfs()
+        props.getSmurfs()
     })
     
     return (
@@ -20,7 +20,7 @@ const SmurfGallery = props => {
         <h2>Our Happy Smurf Family</h2>
         {props.currentSmurfs.map(smurf => {
             return (
-                <div className = "individual-smurf">
+                <div key = {smurf.id} className = "individual-smurf">
                     <h3>{smurf.name}</h3>
                     <p>Height: {smurf.height}</p>
                     <p>Age: {smurf.age}</p>
@@ -31,4 +31,4 @@ const SmurfGallery = props => {
     )
 }
 
-export default connect(mapStateToProps,{})(SmurfGallery)
+export default connect(mapStateToProps,{getSmurfs})(SmurfGallery)

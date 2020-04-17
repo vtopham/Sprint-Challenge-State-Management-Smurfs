@@ -31,7 +31,8 @@ export const reducer = (state = initialState, action) => {
         case FETCH_SMURF_SUCCESS:
             return {
                 ...state,
-                isWaiting: false
+                isWaiting: false,
+                currentSmurfs: action.payload
             }
         case FETCH_SMURF_FAIL:
             return {

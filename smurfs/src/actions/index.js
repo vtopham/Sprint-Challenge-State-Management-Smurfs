@@ -10,20 +10,15 @@ export const DELETE_SMURF_START = "DELETE_SMURF_START"
 export const DELETE_SMURF_SUCCESS = "DELETE_SMURF_SUCCESS"
 export const DELETE_SMURF_FAIL = "DELETE_SMURF_FAIL"
 
-// export const getSmurfs = () => dispatch => {
-//     console.log("you got smurfs")
-//     dispatch({type: FETCH_SMURF_START})
 
-//     
-// }
 
 export const getSmurfs = () => dispatch => {
     dispatch({type: FETCH_SMURF_START})
-    console.log("you got to me!")
 
     axios.get('http://localhost:3333/smurfs')
         .then(res => {
-            console.log(res)
+            console.log(res.data)
+            dispatch({type: FETCH_SMURF_SUCCESS, payload: res.data})
         })
         .catch(err => {
             console.log(err)
