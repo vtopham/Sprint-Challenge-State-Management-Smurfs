@@ -5,14 +5,14 @@ import styled from 'styled-components'
 const Cemetary = styled.div`
 .the-dead{
     display: flex;
-        justify-content: space-around;
+    justify-content: space-around;
 
-        border: 4px solid #F9C80D;
-        border-radius: 10px;
+    border: 4px solid #F9C80D;
+    border-radius: 10px;
 
-        width: 90%;
-        margin: 0 auto;
-        padding: 1%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1%;
     
     }
 
@@ -50,7 +50,8 @@ const DeletedSmurfs = props => {
                     )
                 })}
             </div>
-            <div className = "some-nice-greenery">
+            {/* I thoughti t would be nice to give them somewhere peaceful to rest */}
+            <div className = "some-nice-greenery"> 
                 <img src = "https://ya-webdesign.com/transparent450_/cartoon-bush-png-1.png" alt = "bush"/>
                 <img alt = "tombstone" src = "https://cdn.clipart.email/12d473050d5bf22efbb647d18678e38f_rip-tombstone-clip-art-at-clkercom-vector-clip-art-online-_243-299.png"/>
                 <img src = "https://ya-webdesign.com/transparent450_/cartoon-bush-png-1.png" alt = "bush"/>

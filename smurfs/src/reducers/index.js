@@ -20,6 +20,7 @@ const initialState = {
     ] 
 }
 
+//did not have time/energy to add loading state this sprint, but the skeleton is here should you want to add it.
 export const reducer = (state = initialState, action) => {
     switch(action.type) {
         //fetch smurf actions

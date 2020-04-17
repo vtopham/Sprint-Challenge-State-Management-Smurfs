@@ -22,7 +22,7 @@ const Smurf = styled.div`
 
 `
 
-//this will be called for each gallery individual
+//this will be called for each gallery individual, I wanted to do this so it was easy to grab the smurf object for the handleDeath funciton
 const GalleryIndividual = props => {
 
     const { smurf } = props
